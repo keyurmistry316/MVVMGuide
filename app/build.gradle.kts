@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -26,6 +27,9 @@ android {
             )
         }
     }
+    buildFeatures{
+        viewBinding = true
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -45,4 +49,26 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    //Coroutine
+    implementation(libs.coroutine)
+    implementation(libs.coroutine.android)
+
+    //ViewModel
+    implementation(libs.viewModel)
+
+    //LiveData
+    implementation(libs.livedata)
+
+    //Material
+    implementation(libs.material)
+
+    //Room
+    implementation(libs.room)
+    ksp(libs.room.complier)
+
+    //Codein
+    implementation(libs.kodein.generic)
+    implementation(libs.kodein.framework)
+
 }
