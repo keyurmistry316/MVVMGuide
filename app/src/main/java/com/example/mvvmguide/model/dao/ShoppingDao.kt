@@ -1,4 +1,4 @@
-package com.example.mvvmguide.repo.dao
+package com.example.mvvmguide.model.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
