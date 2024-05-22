@@ -11,7 +11,9 @@ import com.example.mvvmguide.repo.ShoppingRepository
 import com.example.mvvmguide.utils.AddDialogListener
 import com.example.mvvmguide.utils.ShoppingItemClickListener
 import com.example.mvvmguide.view.adapters.ShoppingItemAdapter
+import com.example.mvvmguide.view.dialogs.ShoppingItemDialog
 import com.example.mvvmguide.viewmodel.ShoppingViewModel
+
 
 class ShoppingActivity : AppCompatActivity() {
 

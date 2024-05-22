@@ -1,4 +1,4 @@
-package com.example.mvvmguide.view
+package com.example.mvvmguide.view.dialogs
 
 import android.content.Context
 import android.os.Bundle

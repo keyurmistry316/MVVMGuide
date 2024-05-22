@@ -15,6 +15,7 @@ ksp  ="1.9.24-1.0.20"
 coroutine = "1.8.1"
 meterial = "1.12.0"
 kodein = "6.3.3"
+hilt = "2.44"
 
 
 [libraries]
@@ -27,6 +28,7 @@ material = { group = "com.google.android.material", name = "material", version.r
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 viewModel = {group="androidx.lifecycle",name="lifecycle-viewmodel-ktx",version.ref= "lifecycle_version"}
+viewModel-compose = {group="androidx.lifecycle",name="lifecycle-viewmodel-compose",version.ref= "lifecycle_version"}
 livedata = {group = "androidx.lifecycle",name = "lifecycle-livedata-ktx",version.ref = "lifecycle_version"}
 room = {group = "androidx.room",name = "room-ktx",version.ref = "room"}
 room_complier = { group = "androidx.room",name = "room-compiler",version.ref = "room"}
@@ -35,9 +37,12 @@ coroutine-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutine
 meterial = {group = "com.google.android.material",name = "material",version.ref = "meterial"}
 kodein_generic = { group = "org.kodein.di",name = "kodein-di-generic-jvm",version.ref = "kodein" }
 kodein_framework = { group = "org.kodein.di",name = "kodein-di-framework-android-x",version.ref = "kodein" }
+hilt = {group="com.google.dagger",name = "hilt-android",version.ref = "hilt"}
+hilt-compiler = {group="com.google.dagger",name = "hilt-android-compiler",version.ref = "hilt"}
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 ksp  = { id = "com.google.devtools.ksp",version.ref = "ksp"}
+hilt = {id = "com.google.dagger.hilt.android",version.ref = "hilt"}
 

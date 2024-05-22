@@ -39,6 +39,7 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
 }
 
 dependencies {
@@ -69,8 +70,5 @@ dependencies {
     implementation(libs.room)
     kapt(libs.room.complier)
 
-    //Codein
-    implementation(libs.kodein.generic)
-    implementation(libs.kodein.framework)
 
 }
