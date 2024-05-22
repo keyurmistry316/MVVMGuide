@@ -55,9 +55,7 @@ class ShoppingActivity : AppCompatActivity() {
     private fun setObservables() {
 
             vm.getShoppingItems().observe(this@ShoppingActivity){
-                if(it.isNotEmpty()){
                     shoppingAdapter.setData(it)
-                }
             }
 
     }
