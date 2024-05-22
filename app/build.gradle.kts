@@ -1,7 +1,8 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    alias(libs.plugins.ksp)
+    id("kotlin-kapt")
+    //id ("com.google.devtools.ksp") version "1.6.10-1.0.4"
 }
 
 android {
@@ -28,6 +29,7 @@ android {
         }
     }
     buildFeatures{
+        dataBinding = true
         viewBinding = true
     }
     compileOptions {
@@ -65,7 +67,7 @@ dependencies {
 
     //Room
     implementation(libs.room)
-    ksp(libs.room.complier)
+    kapt(libs.room.complier)
 
     //Codein
     implementation(libs.kodein.generic)

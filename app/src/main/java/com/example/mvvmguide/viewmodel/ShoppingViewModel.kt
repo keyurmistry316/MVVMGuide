@@ -1,15 +1,23 @@
 package com.example.mvvmguide.viewmodel
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.mvvmguide.model.ShoppingItem
 import com.example.mvvmguide.repo.ShoppingRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class ShoppingViewModel(
-    private val shoppingRepository: ShoppingRepository
 ):ViewModel() {
+
+    private lateinit var shoppingRepository: ShoppingRepository
+
+    fun setRepo(repository: ShoppingRepository) {
+        this.shoppingRepository = repository
+    }
 
     fun upsetItem(item: ShoppingItem) = CoroutineScope(Dispatchers.IO).launch {
         shoppingRepository.upsertItem(item)
@@ -19,8 +27,7 @@ class ShoppingViewModel(
         shoppingRepository.deleteItem(item)
     }
 
-    fun getShoppingItems() = CoroutineScope(Dispatchers.IO).launch {
-        shoppingRepository.getItems()
-    }
+    fun getShoppingItems() = shoppingRepository.getItems()
+
 
 }

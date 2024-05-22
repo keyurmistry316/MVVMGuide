@@ -11,21 +11,4 @@ import com.example.mvvmguide.model.dao.ShoppingDao
 abstract class ShoppingDatabase: RoomDatabase() {
 
     abstract fun getShoppingDao(): ShoppingDao
-
-    companion object{
-        @Volatile
-       private var dbInstance : ShoppingDatabase? = null
-
-         fun getInstance(applicationContext: Context) = synchronized(this) {
-            return@synchronized dbInstance ?: Room.databaseBuilder<ShoppingDatabase>(
-                applicationContext,
-                  ShoppingDatabase::class.java,
-                  "shopping_db"
-            )
-                  .build().also { dbInstance = it }
-        }
-
-    }
-
-
 }

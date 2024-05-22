@@ -15,6 +15,6 @@ data class ShoppingItem(
     val name :String,
 
     @ColumnInfo(name = "item_amount")
-    val amount : Int
+    var amount : Int
 
 )
